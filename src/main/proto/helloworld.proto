@@ -5,6 +5,7 @@ syntax = "proto3";
 option java_multiple_files = true;
 option java_package = "tld.domain.proto";
 option java_outer_classname = "HelloWorldProto";
+option csharp_namespace = "grpc_netcore_helloworld_proto";
 
 service GreeterService {
   rpc SayHelloUnary (HelloRequest) returns (HelloResponse);
