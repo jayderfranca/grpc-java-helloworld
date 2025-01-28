@@ -44,7 +44,7 @@ public class GreeterServiceImpl extends GreeterServiceImplBase {
             @Override
             public void onNext(HelloRequest request) {
                 log.info("server received {}", request);
-                String message = "Hello " + request.getFirstName() + " " + request.getLastName() + "!";
+                String message = "Hello " + request.getFirstName() + " " + request.getLastName() + "! Welcome!";
                 responses.add(HelloResponse.newBuilder().setMessage(message).build());
                 responseObserver.onNext(HelloResponse.newBuilder().setMessage("Received data from client, total: " + responses.size() ).build());
 
